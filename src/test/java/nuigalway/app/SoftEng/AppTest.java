@@ -1,5 +1,6 @@
 package nuigalway.app.SoftEng;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class AppTest
     public void StudentModuleTest()
     {
     		//Should not be equal
-    		System.out.println("########## This is the StudentModuleTest and should be false #########");
+    		System.out.println("########## This is the StudentModuleTest and should be true #########");
 		ArrayList<String> RegModules = new ArrayList();
 		RegModules.add("Modelling");
 		RegModules.add("ML");
@@ -38,14 +39,16 @@ public class AppTest
      	System.out.println("These are the registered Modules: " + s2.getRegisteredModules());
      	
      	ArrayList<String> testRegModules = new ArrayList();
-     	testRegModules.add("maths");
-     	testRegModules.add("science");
-     	testRegModules.add("ag science");
-     	testRegModules.add("Enginerring");
+     	testRegModules.add("Modelling");
+     	testRegModules.add("ML");
+     	testRegModules.add("AI");
+     	testRegModules.add("Software Engineering");
      	
      	System.out.println("This is the test Array" + testRegModules);
      	
-     	assertEquals(s2.getRegisteredModules(),testRegModules);
+     	//assertEquals(s2.getRegisteredModules(),testRegModules);
+     	
+     	assertArrayEquals(RegModules.toArray(), testRegModules.toArray());
     	
 	
     }
@@ -66,10 +69,10 @@ public class AppTest
     @Test
     public void CourseProgrammeTest()
     {
-    	System.out.println("########## This is the course programme test and should be false #########");
+    	System.out.println("########## This is the course programme test and should be true #########");
     	CourseProgramme cp1 = new CourseProgramme("CSIT", null, null, null, null);
     		
-     	String testCourseName = "Engineering";
+     	String testCourseName = "CSIT";
      	System.out.println("Course name is: " + cp1.getCourseName());
      	
     		assertEquals(cp1.getCourseName(),testCourseName);
