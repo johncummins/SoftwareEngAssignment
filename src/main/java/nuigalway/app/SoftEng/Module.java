@@ -7,16 +7,16 @@ import java.util.List;
 public class Module {
 	private String modName;
 	private String modId;
-	ArrayList <String> students = new ArrayList <String>();
-	ArrayList <String> courses = new ArrayList <String>();
+	private List<Student> students = new ArrayList<Student>();
+	private List<CourseProgramme>courses = new ArrayList<CourseProgramme>();
 	
 	
-	public Module(String modName, String modId, ArrayList<String> students, ArrayList<String> courses) {
+	public Module(String modName, String modId, List<Student> students, List<CourseProgramme> courses) {
+		super();
 		this.modName = modName;
 		this.modId = modId;
-		this.students = students;
-		this.courses = courses;
 	}
+	
 	public String getModName() {
 		return modName;
 	}
@@ -29,18 +29,18 @@ public class Module {
 	public void setModId(String modId) {
 		this.modId = modId;
 	}
-	public List<String> getStudents() {
+	public List<Student> getStudents() {
 		return students;
 	}
-	public void setStudents(ArrayList <String> students) {
+	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-	public List<String> getCourses() {
+	public List<CourseProgramme> getCourses() {
 		return courses;
 	}
-	public void setCourses(ArrayList <String> courses) {
+	public void setCourses(List<CourseProgramme> courses) {
 		this.courses = courses;
 	}
-	
+
 	
 }

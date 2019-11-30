@@ -2,40 +2,45 @@ package nuigalway.app.SoftEng;
 
 
 import java.util.ArrayList;
-import org.joda.time.DateTime;
+import org.joda.time.*;
 
 public class CourseProgramme {
 	
 	private String courseName;
-	ArrayList <String> modules = new ArrayList<String>();
-	ArrayList <String> students = new ArrayList<String>();
-	DateTime startDate = DateTime.now();
-	DateTime endDate = DateTime.now();
+	private ArrayList <Module> modules = new ArrayList<Module>();
+	private ArrayList <Student> students = new ArrayList<Student>();
+	private DateTime startDate;
+	private DateTime endDate;
 	
-	public CourseProgramme(String courseName, ArrayList<String> modules, ArrayList<String> students, DateTime startDate,
-			DateTime endDate) {
+	
+	public CourseProgramme(String courseName, ArrayList<Module> modules, ArrayList<Student> students,
+			DateTime startDate, DateTime endDate) {
+		super();
 		this.courseName = courseName;
 		this.modules = modules;
 		this.students = students;
 		this.startDate = startDate;
 		this.endDate = endDate;
 	}
+	
+
 	public String getCourseName() {
 		return courseName;
 	}
+
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
-	public ArrayList<String> getModules() {
+	public ArrayList<Module> getModules() {
 		return modules;
 	}
-	public void setModules(ArrayList<String> modules) {
+	public void setModules(ArrayList<Module> modules) {
 		this.modules = modules;
 	}
-	public ArrayList<String> getStudents() {
+	public ArrayList<Student> getStudents() {
 		return students;
 	}
-	public void setStudents(ArrayList<String> students) {
+	public void setStudents(ArrayList<Student> students) {
 		this.students = students;
 	}
 	public DateTime getStartDate() {
@@ -50,5 +55,6 @@ public class CourseProgramme {
 	public void setEndDate(DateTime endDate) {
 		this.endDate = endDate;
 	}
+	
 
 }
